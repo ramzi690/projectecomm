@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Modern E-commerce</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo">Shop</a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active">Home</a></li>
+                    <li><a href="#products" class="nav__link">Products</a></li>
+                    <li><a href="#categories" class="nav__link">Categories</a></li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <button id="cartBtn" class="cart-btn">
+                    <span class="cart-count">0</span>
+                    <img src="src/assets/icons/cart.svg" alt="Cart" class="cart-icon">
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Discover Amazing Products</h1>
+                <p>Shop the latest trends with confidence</p>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="products__filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="electronics">Electronics</button>
+                    <button class="filter-btn" data-category="clothing">Clothing</button>
+                    <button class="filter-btn" data-category="accessories">Accessories</button>
+                </div>
+                <div class="products__grid" id="productsGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cartModal" class="modal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Your Cart</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div id="cartItems" class="cart-items"></div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn btn--secondary" id="clearCartBtn">Clear Cart</button>
+                <button class="btn btn--primary" id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
